@@ -1,0 +1,45 @@
+body {
+    background: #FFF url(bilder/hintergrund.gif) top left; 
+    margin: 20px;
+
+}
+
+form {
+    display: table;
+    padding: 10px;
+    border: thin dotted #7e7e7e;
+    background-color: #d8eccb;
+}
+
+form textarea {
+    width: 500px;
+    height: 200px;
+}
+
+div.tabellenzeile {
+    display: table-row;
+
+}
+
+p.ueberschrift {
+    font-weight: bold;
+}
+
+
+div.tabellenzeile > p, div.tabellenzeile > label, div.tabellenzeile > input {
+	display: table-cell;
+	vertical-align: top;
+	padding: 3px;
+}
+div.tabellenzeile p:first-child, div.tabellenzeile label:first-child {
+	text-align: right;
+}
+
+form textarea {
+	display: table-cell;
+	width: 500px;
+	height: 200px;
+}
+legend {
+	font-weight: bold;
+}
