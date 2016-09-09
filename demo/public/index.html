@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+   <head>
+      <title>TheTradeOffs</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="lounge.css">
+      <script src="lounge.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">  </script>
+
+<!--Collector control Interface-->
+ <script>
+ $(document).ready(function(){
+        var type, SumL, price, SubTH, ValTH;
+        $("#submit").click(function(){
+          type=$("#type").val();
+          SumL=$("#SumL").val();
+          price=$("#price").val();
+          SubTH=$("#SubTH").val();
+          ValTH=$("#ValueTH").val();
+          $.post("https://lisha.by.ether.camp:8080",{type: type,SumL: SumL, price:price, SubTH:SubTH, ValTH:ValTH}, function(data){
+          
+          //$.post("https://lisha.by.ether.camp:8080",{user: user,password: pass}, function(data){
+            if(data==='done')
+            {
+            alert("login success");
+          }
+          });
+          });
+      });
+    </script>
+       <!--User Submission Interface-->
+     <script>
+ $(document).ready(function(){
+        var type, SumL, number;
+        $("#submit1").click(function(){
+          type1=$("#type1").val();
+          SumL1=$("#SumL1").val();
+          number=$("#number").val();
+          $.post("https://lisha.by.ether.camp:8080",{type1: type1,SumL1: SumL1,number: number }, function(data){
+          
+          //$.post("https://lisha.by.ether.camp:8080",{user: user,password: pass}, function(data){
+            if(data==='done')
+            {
+            alert("login success");
+          }
+          });
+        });
+      });
+    </script>
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   </head>
+   <body>
+      <header class="header">
+         <div id="Element.SITE_ROOT" style="left: 0; right: 0; position: 
+            fixed;">
+         <nav>
+            <ul>
+               <li class="selected"><a href="request.html">REQUEST 
+                  OFFER</a>
+               </li>
+               <li><a href="index.html">FEATURES</a></li>
+               <li><a href="now.html">NOW<a/></li>
+            </ul>
+         </nav>
+      </header>
+      <header class="hauptinhalt">
+         <div id="tabellenContainer">
+         <div id=tabellenZeile">
+         <section id="features">
+            <header>
+               <h1>TRADING CENTER</h1>
+            </header>
+            <header>
+               <!--<h1>Format</h1>-->
+               <!--<h2>CHOOSE THE RIGHT FORMAT</h2>-->
+               <!--<nav>-->
+               <!--   <ul>-->
+                    <!--<li>Choose your format:</li>-->
+<!--<p><label for="formen"> DataX or DataY?</label>-->
+<!--<select id="formen">-->
+
+<!--<option value="keine" selected="selected">DataX</option>-->
+<!--<option value="keine" selected="selected">DataY</option>-->
+<!--<option value="keine" selected="selected">Neigther</option>-->
+<!--</select>-->
+
+
+<div>
+<h1>Collector Control Interface</h1>
+<p>
+Type: <input type="TEXT" id="type" size="40"><br>
+Summerization level: <input type="TEXT" id="SumL" size="40"><br>
+Price: <input type="TEXT" id="price" size="40"><br>
+Submission threshold: <input type="TEXT" id="SubTH" size="40"><br>
+Value threshold: <input type="TEXT" id="ValueTH" size="40"><br>
+<input type="button" id="submit" value="Submit"><br>
+show Price 
+</div>
+
+
+<div>
+<h1>User Submission Interface</h1>
+<p>
+Type: <input type="TEXT" id="type1" size="40"><br>
+Summerization level: <input type="TEXT" id="SumL1" size="40"><br>
+Number of data points: <input type="TEXT" id="number" size="40"><br>
+<input type="button" id="submit1" value="Submit"><br>
+</div>
+
+<!--<li>How much do you want to summarize?</li>-->
+<!--<p><label for="formen"> Low, medium or high?</label>-->
+<!--<select id="formen">-->
+<!--<option value="keine" selected="selected">Low</option>-->
+<!--<option value="keine" selected="selected">Medium</option>-->
+<!--<option value="keine" selected="selected">High</option>-->
+<!--</select></br></br>-->
+Keep in mind that the more summarized your data is the less the reward will be!</p>
+                  </ul>
+               </nav>
+
+            </header>
+            <header>
+               <h1>Market</h1>
+<p>Coming soon!</p>
+               
+            </header>
+            
+            
+           
+            <header>
+               <h1>How to use Ethereum</h1>
+<nav><ul>
+<li>Coming soon!</li></br>
+
+</ul></nav>   
+        </header>
+         </section>
+      </header>
+      <header class="footer">
+         <nav>
+            <ul>
+               <li>&copy; 2016, TheTradeOffs</li>
+               <div class="dropdown">
+                  <span>
+                     <li><a href="company.html">COMPANY</a></li>
+                  </span>
+                  <div class="dropdown-content">
+                     <ul>
+                        <li><a href="company.html#contact">CONTACT</a></li>
+                        <li><a href="company.html#faq">FAQ</a></li>
+                        <li><a href="company.html#news">NEWS</a></li>
+                     </ul>
+                  </div>
+               </div>
+               
+            </ul>
+         </nav>
+         </section>
+      </header>
+   </body>
+</html>
+

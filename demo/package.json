@@ -1,0 +1,8 @@
+{
+  "name": "hello",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "latest",
+    "web3": "latest"
+  }
+}
